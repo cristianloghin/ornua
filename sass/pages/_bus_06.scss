@@ -1,0 +1,134 @@
+#bus_06_page {
+	.page_container {
+		padding-top: $base-line-height * 2;
+	}
+	#sec_1 {
+		p.TextIntroCopy {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+	}
+	#sec_2 {
+		.banner_image {
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+	#sec_4 {
+		width: 100%;
+		background: $light_background;
+		margin-top: $base-line-height * 2;
+		.mod_bus_con {
+			
+			width: 90%;
+			margin: 0 auto;
+			padding: $base-line-height * 2 0;
+			
+			.wrapper {
+				.row {
+					.item {
+						padding-top: $base-line-height / 2;
+						span {
+							display: block;
+						}
+						span:first-child{
+							font-size: 1.25em;
+							line-height: $base-line-height * 1.25;
+						}
+						span:nth-child(2) {
+							font-weight: 700;
+							font-size: 1.125em;
+							color: $grass_green;
+						}
+						span:last-child {
+
+						}
+					}
+					.item {
+						margin-top: $base-line-height / 2;
+						border-top: 1px solid $white;
+					}
+				}
+				.row:first-child {
+					.item:first-child {
+						margin-top: 0;
+						border-top: none;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 64em) {
+	#bus_06_page {
+		#sec_4 {
+			.mod_bus_con {
+				.wrapper {
+					.row {
+						clear: both;
+						.item {
+							width: 48%;
+							float: left;
+						}
+						.item:last-child {
+							float: right;
+						}
+					}
+					.row:first-child {
+						.item:last-child {
+							margin-top: 0;
+							border-top: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 75em) {
+	#bus_06_page {
+		.page_container {
+			width: $max_width;
+		}
+		#sec_1, #sec_3 {
+			width: 80%;
+		}
+		#sec_2 {
+			width: 100%;
+		}
+		#sec_4 {
+			width: 100%;
+			background: $white;
+			margin-top: $base-line-height * 2;
+			padding-bottom: $base-line-height * 2;
+			.mod_bus_con {
+				width: 80%;
+				padding: $base-line-height * 2;
+				background: $light_background;
+				border-radius: $base-line-height;
+				-webkit-border-radius: $base-line-height;
+				-moz-border-radius: $base-line-height;
+				.wrapper {
+					.row {
+						clear: both;
+						.item {
+							width: 48%;
+							float: left;
+						}
+						.item:last-child {
+							float: right;
+						}
+					}
+					.row:first-child {
+						.item:last-child {
+							margin-top: 0;
+							border-top: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

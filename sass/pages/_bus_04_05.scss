@@ -1,0 +1,144 @@
+#bus_04_page, #bus_05_page {
+	#sec_1 {
+		width: 100%;
+		.mod_shared_banner {
+
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: #eceaeb;
+
+			.slide {
+				height: $base-line-height * 22;
+				.content_box_1 {
+					width: 50%;
+				}
+			}
+			p.TextPullQuote {
+				color: $grass_green;
+			}
+			.slide:last-child {
+				@include trans-background-moss-green(.9);	
+			}
+			.content_box_2 {
+				text-align: center;
+				.mod_shared_info_1 {
+					
+					display: inline-block;
+					width: $base-line-height * 15;
+
+					.row {
+						width: 100%;
+						clear: both;
+						span:first-child {
+							width: 35%;
+							float: left;
+							display: block;
+							min-height: 1px;
+						}
+						span:last-child, h3 {
+							width: 65%;
+							float: left;
+						}
+					}
+					h3 {
+						color: $meadow_green;
+						text-align: left;
+					}
+					.big-no {
+						color: $white;
+						text-align: left;
+					}
+					.text {
+						color: $white;
+						text-align: left;
+						display: block;
+						font-size: 1.5em;
+						line-height: $base-line-height * 1.5;
+					}
+				}
+			}
+		}
+	}
+	#sec_2 {
+		padding-top: $base-line-height * 2;
+	}
+}
+#bus_04_page {
+	#sec_1 {
+		.mod_shared_banner {
+			background-image: url('/img/chairman-photo-large.jpg');
+		}
+	}
+}
+#bus_05_page {
+	#sec_1 {
+		.mod_shared_banner {
+			background-image: url('/img/ceo-photo-large.jpg');
+		}
+	}
+}
+@media screen and (min-width: 64em) {
+	
+}
+@media screen and (min-width: 75em) {
+	#bus_04_page, #bus_05_page {
+		#sec_1 {
+			.mod_shared_banner {
+				background-position: 65% center;
+				.slide {
+					.content_box_1,
+					.content_box_2 {
+						width: 80% !important;
+						margin: 0 auto;
+						p {
+							width: 60%;
+						}
+					}
+				}
+				.content_box_2 {
+					.mod_shared_info_1 {
+						width: $base-line-height * 20;
+						.row {
+							span:first-child {
+								width: 35%;
+								float: left;
+								display: block;
+								min-height: 1px;
+							}
+							span:last-child, h3 {
+								width: 65%;
+								float: left;
+							}
+						}
+						h3 {
+							font-size: 1.5em;
+							line-height: $base-line-height * 1.5;
+						}
+						.icon-arrow-up {
+							font-size: 4.5em;
+							line-height: $base-line-height * 5;
+							height: $base-line-height * 5;
+						}
+						.big-no {
+							font-size: 5em;
+							line-height: $base-line-height * 5;
+						}
+						.text {
+							font-size: 1.75em;
+							line-height: $base-line-height * 1.75;
+						}
+					}
+				}
+			}	
+		}
+		#sec_2 {
+			width: $max_width;
+			.mod_bus_con {
+				width: 80%;
+				margin: 0 auto;
+				padding-bottom: $base-line-height * 2;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+#gov_page {
+	
+	background: $light_background;
+
+	.page_container {
+		/* custom sizes go here */
+	}
+
+	h1,
+	section:not(#sec_2) {
+		width: 90%;
+		margin: 0 auto;
+		
+	}
+	#sec_2 {
+		background: $white;
+		margin: $base-line-height * 1.5 0;
+		.mod_gov_info {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (min-width: 75em) {
+	#gov_page {
+		h1,
+		section:not(#sec_2) {
+			width: 80%;
+		}
+		#sec_2 {
+			width: 80%;
+			margin: $base-line-height * 1.5 auto;
+			padding: 0 $base-line-height * 2;
+			border-radius: $base-line-height;
+			-moz-border-radius: $base-line-height;
+			-webkit-border-radius: $base-line-height;
+			.mod_gov_info {
+				width: 100%;
+			}
+		}
+	}
+}

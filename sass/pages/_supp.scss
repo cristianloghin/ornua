@@ -1,0 +1,134 @@
+.supp_page {
+	background: $light_background;
+	.page_container {
+		> h1, > section {
+			width: 90%;
+			margin: 0 auto;
+		}
+		h1 + section, section + section {
+			margin-top: $base-line-height * 2;
+		}
+	}
+}
+
+#supp_01_page {
+	h1 {
+		font-size: 2em;
+		line-height: $base-line-height * 2;
+		margin-bottom: $base-line-height;
+	}
+	th, td {
+		text-align: left;
+	}
+	td {
+		vertical-align: top;
+	}
+	tr:hover {
+		background: transparent;
+	}
+	#supp_01_01, #supp_01_02 {
+		td:nth-child(2), td:nth-child(3), td:last-child {
+			width: 25%;
+		}
+	}
+	#supp_01_03 {
+		td:nth-child(2) {
+			width: 35%;
+		}
+		td:last-child {
+			width: 30%;
+		}
+	}
+}
+
+#supp_02_page {
+	
+	#sec_1 {
+		width: 100%;
+		background: $white;
+		padding: $base-line-height * 2 0;
+		.mod_supp_con {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	.mod_shared_info_2 + .mod_shared_info_2 {
+		margin-top: $base-line-height * 2;
+	}
+}
+
+#supp_03_page {
+	.page_container {
+		#sec_1 {
+			width: 100%;
+			background: $white;
+			padding: $base-line-height * 2 0;
+			.mod_supp_con {
+				width: 90%;
+				margin: 0 auto;
+				.mod_shared_info_3 {
+					float: left;
+					width: 48%;
+				}
+				.mod_shared_info_3:nth-child(2) {
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 64em) {
+	#supp_02_page {
+		#sec_1 {
+			.mod_shared_info_2 {
+				width: 48%;
+				float: left;
+			}
+			.mod_shared_info_2:nth-child(2) {
+				margin: 0;
+				float: right;
+			}
+		}
+	}
+} 
+
+@media screen and (min-width: 75em) {
+	.supp_page {
+		.page_container {
+			> h1, > section {
+				width: 80%;
+			}
+		} 
+	}
+
+	#supp_02_page {
+	
+		#sec_1 {
+			width: 80%;
+			padding: $base-line-height * 2;
+			border-radius: $base-line-height;
+			-moz-border-radius: $base-line-height;
+			-webkit-border-radius: $base-line-height;
+			.mod_supp_con {
+				width: 100%;
+			}
+		}
+	}
+
+	#supp_03_page {
+		.page_container {
+			#sec_1 {
+				width: 80%;
+				padding: $base-line-height * 2;
+				border-radius: $base-line-height;
+				-moz-border-radius: $base-line-height;
+				-webkit-border-radius: $base-line-height;
+				.mod_supp_con {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

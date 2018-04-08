@@ -1,0 +1,307 @@
+#home_page {
+	
+	.page_container {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	#sec_1 {
+		
+		.mod_shared_banner {
+
+			background-image: url('/img/home-banner-1.jpg');
+			background-size: auto 57%;
+			background-repeat: no-repeat;
+			background-position: bottom right;
+
+			.slide {
+				height: $base-line-height * 30;
+				vertical-align: top;
+			}
+
+			p.LargeHeading {
+				color: $grass_green;
+				font-size: 3em;
+				line-height: $base-line-height * 2.5;
+				width: 75%;
+				padding-top: $base-line-height * 2;
+			}
+			
+			p.TextPullQuote {
+				font-size: 1.25em;
+				color: $stone_grey;
+				line-height: $base-line-height * 1.25;
+				width: 80%;
+				margin: $base-line-height 0;
+			}
+
+			img {
+				height: $base-line-height * 3.5;
+				display: block;
+				padding-top: $base-line-height * .5;
+			}
+
+			.slide:last-child {
+				/*background: rgba(255, 255, 255, .9);*/
+				@include trans-background-moss-green(.9);
+				vertical-align: middle;
+
+				p.TextPullQuote {
+					width: 100%;
+					color: $white;
+				}
+				.icon_box_1 {
+					margin: $base-line-height 0;
+				}
+				p.BodyText {
+					width: 48%;
+					margin: 0;
+					float: left;
+					color: $white;
+				}
+				p.BodyText + p.BodyText {
+					float: right;
+				}
+			}
+			.mod_shared_ico_txt {
+				display: table-cell;
+				width: 33%;
+				span {
+					color: $meadow_green;
+				}
+				p {
+					color: $white;
+					font-size: 1.125em;
+					line-height: $base-line-height * 1.125;
+				}
+			}
+			.mod_shared_ico_txt + .mod_shared_ico_txt {
+					border-left: 1px solid $meadow_green;
+			}
+		}
+	}
+
+	#sec_2 {
+		
+		.mod_shared_banner {
+			.slide {
+				height: $base-line-height * 28;
+				background-repeat: no-repeat;
+				background-size: 105% auto;
+				background-position: bottom right;
+				.content_box_1 {
+					padding-left: $base-line-height * 1.5;
+				}
+			}
+			.slide:first-child {
+				background-image: url('/img/chairman-photo.jpg');
+			}
+			.slide:last-child {
+				background-image: url('/img/ceo-photo.jpg');
+				
+			}
+			p.TextPullQuote {
+				font-size: 1.25em;
+				color: $stone_grey;
+				line-height: $base-line-height * 1.25;
+				width: 46%;
+				margin: $base-line-height 0;
+			}
+		}
+	}
+	#sec_3 {
+		
+		.mod_shared_info_1 {
+			width: 48%;
+			margin-right: 2%;
+			margin-bottom: $base-line-height;
+			float: left;
+		}
+		.mod_shared_banner {
+			.slide {
+				padding-top: $base-line-height * 5;
+				padding-bottom: $base-line-height * 2;
+			}
+			.mod_shared_ico_txt {
+				display: table-cell;
+				width: 33%;
+				span:not(.title) {
+					color: $meadow_green;
+				}
+				p {
+					color: $grass_green;
+					font-size: 1.125em;
+					line-height: $base-line-height * 1.125;
+					span {
+						display: block;
+						font-weight: 700;
+					}
+				}
+			}
+			.mod_shared_ico_txt + .mod_shared_ico_txt {
+					border-left: 1px solid $meadow_green;
+			}
+		}
+	}
+	#sec_4 {
+		background-image: url('/img/sus-banner-1.jpg');
+		background-size: 115% auto;
+		background-position: top center;
+		background-repeat: no-repeat;
+		height: $base-line-height * 25;
+		> div {
+			display: table;
+			margin: 0 auto;
+			width: 90%;
+			height: 100%;
+			> div {
+				display: table-cell;
+				vertical-align: middle;
+				p {
+					width: 50%;
+					font-size: 1.25em;
+					line-height: $base-line-height * 1.25;
+					text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+					margin-bottom: $base-line-height;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 64em) {
+	#home_page {
+		#sec_1 {
+			.mod_shared_banner {
+
+				background-size: auto 70%;
+
+				p.TextPullQuote {
+					width: 50%;
+				}
+				.slide:last-child {
+					.icon_box_1 {
+						margin: $base-line-height * 2 0;
+					}
+				}
+			}
+		}
+		#sec_2 {
+			.mod_shared_banner {
+				.slide {
+					background-position: right -120px;
+				}
+			}
+		}
+		#sec_4 {
+			background-size: 100% auto;
+			height: $base-line-height * 30;
+		}
+	}
+}
+
+@media screen and (min-width: 75em) {
+	#home_page {
+		#sec_1 {
+			.mod_shared_banner {
+
+				background-size: 65% auto;
+				background-position: 115% bottom;
+
+				.slide {
+					vertical-align: middle;
+				}
+				.content_box_1 {
+					width: 80%;
+					margin: -$base-line-height * 4 auto 0 auto;
+				}
+				.slide:last-child {
+					.content_box_1 {
+						margin: 0 auto;
+					}
+				}
+				p.LargeHeading {
+					padding-top: 0;
+				}
+				p.TextPullQuote {
+					width: 50%;
+				}
+				.mod_shared_ico_txt {
+					p {
+						font-size: 1.25em;
+						line-height: $base-line-height * 1.25;
+					}
+				}
+			}
+		}
+		#sec_2 {
+			.mod_shared_banner {
+				background: $light_background;
+				.slide {
+					height: $base-line-height * 30;
+					.content_box_1 {
+						width: 80%;
+						height: $base-line-height * 24;
+						margin: 0 auto;
+						background: #fcc;
+						padding: 0 $base-line-height * 2;
+						border-radius: 20px;
+						-moz-border-radius: 20px;
+						-webkit-border-radius: 20px;
+						background-size: 100% auto;
+						background-position: right -100px;
+					}
+				}
+				.slide:first-child {
+					background: transparent;
+					.content_box_1 {
+						background-image: url('/img/chairman-photo-$white.jpg');
+					}
+				}
+				.slide:last-child {
+					background: transparent;
+					.content_box_1 {
+						background-image: url('/img/ceo-photo-$white.jpg');
+					}
+				}
+				h2.LargeHeading {
+					padding-top: $base-line-height * 4.5;
+				}
+			}
+		}
+		#sec_3 {
+			.mod_shared_banner {
+				.content_box_1, .icon_box_1 {
+					width: 80%;
+					margin: 0 auto;
+				}
+				.mod_shared_ico_txt {
+					p {
+						font-size: 1.25em;
+						line-height: $base-line-height * 1.25;
+					}
+				}
+			}
+		}
+		#sec_4 {
+			> div {
+				width: $max_width;
+				> div {
+					h2, .button {
+						width: 80%;
+						margin-left: auto;
+						margin-right: auto;
+					}
+					p {
+						width: 40%;
+						margin-left: 10%;
+						font-size: 1.5em;
+						line-height: $base-line-height * 1.5;
+					}
+				}
+			}
+		}
+	}
+}

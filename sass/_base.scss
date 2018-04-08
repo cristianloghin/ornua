@@ -1,0 +1,337 @@
+// Variables
+// ======
+
+$grass_green : #58A618;
+$meadow_green : #92D400;
+$moss_green : #009B48;
+$stone_grey : #8B8D8E;
+
+$buttercup_yellow : #F1E800;
+$sky_blue : #8FCAE7;
+$sea_blue : #4B92DB;
+$soil_brown : #A79E70;
+
+$white: #fff;
+
+$light_background: #F0F0F0;
+$medium_background: #E0E0E0;
+
+$base-line-height: 20px;
+$max-width: 72em;
+
+@mixin round-corner($position, $value) {
+
+	@if $position == top-left {
+
+		border-radius: $value 0px 0px 0px;
+		-moz-border-radius: $value 0px 0px 0px;
+		-webkit-border-radius: $value 0px 0px 0px;
+	
+	} @else if $position == top-right {
+		border-radius: 0px $value 0px 0px;
+		-moz-border-radius: 0px $value 0px 0px;
+		-webkit-border-radius: 0px $value 0px 0px;
+
+	} @else if $position == bottom-right {
+
+		border-radius: 0px 0px $value 0px;
+		-moz-border-radius: 0px 0px $value 0px;
+		-webkit-border-radius: 0px 0px $value 0px;
+	} @else {
+		border-radius: 0px 0px 0px $value;
+		-moz-border-radius: 0px 0px 0px $value;
+		-webkit-border-radius: 0px 0px 0px $value;
+	}
+	
+}
+
+@mixin custom-transition($property, $duration) {
+	-webkit-transition: $property $duration ease-out;
+	-moz-transition: $property $duration ease-out;
+	-ms-transition: $property $duration ease-out;
+	-o-transition: $property $duration ease-out;
+	transition: $property $duration ease-out;
+}
+
+@mixin trans-background-moss-green($value) {
+	background-color: rgba(0, 155, 72, $value);
+}
+
+@mixin trans-background-stone-grey($value) {
+	background-color: rgba(139, 141, 142, $value);
+}
+
+@include establish-baseline();
+
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'PT Sans', sans-serif;	
+}
+
+body {
+	color: $stone_grey;
+	min-width: 48em;
+	position: relative;
+}
+
+.control_menu {
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 3em;
+	line-height: $base-line-height * 3;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: 400;
+	line-height: $base-line-height * 2;
+}
+
+h1,
+h2 {
+	color: $grass_green;
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 1.125em;
+}
+
+p + h2, ul + h2, ol + h2, table + h2, h3 + h3 {
+	margin-top: $base-line-height;
+}
+
+p + h3, ul + h3, ol + h3, table + h3 {
+	margin-top: $base-line-height;
+}
+
+p + p, p + ul, p + ol {
+	margin-top: $base-line-height / 2;
+}
+
+ul + p, ol + p, table + p {
+	margin-top: $base-line-height;
+}
+
+p + table {
+	margin-top: $base-line-height /2;
+}
+
+table + table {
+	margin-top: $base-line-height;
+}
+p.TextPullQuote {
+	font-size: 1.5em;
+	line-height: $base-line-height * 1.5;
+	color: $white;
+}
+
+p.TextIntroCopy {
+	font-size: 1.5em;
+	line-height: $base-line-height * 1.5;
+	color: $grass_green;
+	border-bottom: 1px solid $meadow_green;
+	padding: $base-line-height 0;
+}
+
+p.LargeSubHeading {
+	font-size: 1.125em;
+	font-weight: bold;
+	line-height: $base-line-height;
+	color: $stone_grey;
+	padding: 0 0;
+}
+
+p.TextBodyCopy {
+	text-align: justify;
+	a {
+		color: $grass_green;
+	}
+}
+
+p.LargeSubHeading + p:not(.TextIntroCopy) {
+	margin-top: $base-line-height*2;
+}
+
+p + ul, p + ol {
+	padding-left: gutter() * 2;
+	li {
+		/*list-style-position: inside;*/
+		ul, ol {
+			padding-left: gutter() * 2;
+		}
+	}
+}
+
+.button {
+	a {
+		display: inline-block;
+		background: $grass_green;
+		padding: 10px 15px;
+		text-decoration: none;
+		color: $white;
+		font-size: 1.25em;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+}
+
+@media screen and (min-width: 75em) {
+	p.TextPullQuote {
+		font-size: 2em;
+		line-height: $base-line-height * 2;
+		color: $white;
+	}
+}
+
+/* DEFAULT PAGE CONTINER, OVERRIDE AS NEEDED AT PAGE LEVEL */
+.page_container {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: $base-line-height * 2 0;
+}
+
+/* DEFAULT ICON, OVERRIDE AS NEEDED AT PAGE OR MODULE LEVEL */
+.icon {
+	display: block;
+	width: $base-line-height * 2;
+	height: $base-line-height * 2;
+	text-align: center;
+	line-height: $base-line-height * 2;
+	font-size: 2em;
+	color: $meadow_green;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	tbody {
+		tr:not(.empty_row) {
+			background: transparent;
+			@include custom-transition(background, .2s);
+		}
+		tr:not(.empty_row):hover {
+			background: $white;
+		}
+	}
+	th {
+		vertical-align: bottom;
+		color: $grass_green;
+		font-weight: 400;
+		font-size: .875em;
+		
+		&.AccountsSmallHeadingsTopBold {
+			font-weight: 700;
+		}
+	}
+	th, td {
+		padding: $base-line-height/6 $base-line-height/2 $base-line-height/6 $base-line-height/2;
+	}
+	th:not(:first-child),
+	td:not(:first-child) {
+		text-align: right;
+	}
+	.cell-style-override-1 {
+		background: $white;
+	}
+	td.TextSubHeading3, td.AccountsTabbedBold, td.TextBodyCopyIndentBold {
+		font-weight: bold;
+	}
+	th.TextSubHeading1, td.TextSubHeading1 {
+		color: $grass_green;
+		font-size: 1.125em;
+		text-align: left;
+	}
+	td.TextSubHeading2 {
+		font-weight: bold;
+	}
+	th.AccountsSmallHeadingsTopCentred {
+		text-align: center;
+	}
+	th.SmallHeadingLeft {
+		text-align: left;
+	}
+	td.TextBodyCopyIndent, td.TextBodyCopyIndentBold {
+		padding-left: $base-line-height;
+	}		
+	.LightLine {
+		td,
+		th {
+			border-bottom: 1px solid $grass_green;
+		}
+	}
+	.HeavyLine {
+		td,
+		th {
+			border-bottom: 2px solid $grass_green;
+		}
+	}
+	.empty_row {
+		td {
+			height: $base-line-height / 2;
+		}
+	}
+	.AccountsTabbed, .AccountsTabbedBold {
+		span {
+			display: inline-block;
+			text-align: left;
+			margin-right: -4px;
+		}
+	}
+}
+table.all-col-left {
+	td {
+		text-align: left !important;
+	}
+}
+.table-3col {
+	td:nth-child(2),
+	td:last-child {
+		width: 20%;
+	}
+}
+
+.table-4col {
+	td:nth-child(2),
+	td:nth-child(3),
+	td:last-child {
+		width: 15%;
+	} 
+}
+
+.table-6col {
+	td:nth-child(2),
+	td:nth-child(3),
+	td:nth-child(4),
+	td:nth-child(5),
+	td:last-child {
+		width: 10%;
+	} 
+}
+.table-7col {
+	td:nth-child(2),
+	td:nth-child(3),
+	td:nth-child(4),
+	td:nth-child(5),
+	td:nth-child(6),
+	td:last-child {
+		width: 10%;
+	} 
+}
+
+

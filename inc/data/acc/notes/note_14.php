@@ -1,0 +1,2 @@
+<h2 class="TextSubHeading1">14. Stock</h2>
+<p class="TextBodyCopy">Stocks at period end primarily consist of finished goods for consumption. There are no material differences between the replacement cost of stock and the amount carried in the balance sheet.</p>

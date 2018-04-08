@@ -1,0 +1,135 @@
+.small_submenu {
+	clear: both;
+	> p {
+		font-size: 1.5em;
+		font-weight: 700;
+		line-height: $base-line-height * 2;
+		color: $grass_green;
+		width: 90%;
+		margin: 0 auto;
+		padding-top: $base-line-height;
+	}
+}
+
+.large_submenu {
+	display: none;
+}
+
+.submenu {
+	nav {
+		width: 90%;
+		margin: 0 auto;
+		padding-bottom: $base-line-height;
+		ul {
+			list-style: none;
+			li {
+				padding-top: $base-line-height * .5;
+				a {
+					display: block;
+					padding-bottom: $base-line-height * .5;
+					color: $stone_grey;
+					text-decoration: none;
+					font-size: 1.25em;
+				}
+			}
+			li.active {
+				a {
+					color: $grass_green;
+				}
+			}
+			li + li {
+				border-top: 1px solid $meadow_green;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.small_submenu {
+		display: none;
+	}
+	.large_submenu {
+		display: block;
+	}
+	.large_submenu.fixed {
+		position: fixed;
+		z-index: 20;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	.submenu {
+		background: $grass_green;
+		nav {
+			width: $max-width;
+			padding-bottom: 0;
+			ul {
+				list-style: none;
+				display: table;
+				width: 100%;
+				li {
+					display: table-cell;
+					padding: $base-line-height/2;
+					position: relative;
+					border-left: 1px solid $meadow_green;
+					border-top: none !important;
+					text-align: center;
+					vertical-align: middle;
+					a {
+						padding: 0;
+						color: $white;
+						font-size: 1em;
+					}
+				}
+				li:last-child {
+					border-right: 1px solid $meadow_green;
+				}
+				li.active {
+					background: $moss_green;
+					a {
+						color: $white;
+					}
+					span {
+						display: block;
+						position: absolute;
+						z-index: 5;
+						bottom: -$base-line-height/1.5;
+						width: 0;
+						height: 0;
+						left: 50%;
+						margin-left: -$base-line-height/1.5;
+						border-style: solid;
+						border-width: $base-line-height/1.5 $base-line-height/1.5 0 $base-line-height/1.5;
+						border-color: $moss_green transparent transparent transparent;
+					}
+				}
+			}
+
+		}
+
+	}
+
+	.submenu#financial-statements {
+		li {
+			width: 13%;
+		}
+		li:nth-child(6) {
+			width: 20%;
+		}
+		li:last-child {
+			width: 15%;
+		}
+	}
+
+	.submenu#supplementary-information {
+		li {
+			width: 45%;
+		}
+		li:nth-child(2) {
+			width: 25%;
+		}
+		li:last-child {
+			width: 30%;
+		}
+	}
+}

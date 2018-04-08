@@ -1,0 +1,30 @@
+#notes_page {
+	background: $light_background;
+	.page_container {
+		/* custom sizes go here */
+	}
+	h1, .notes_nav, .tabs_holder {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.tabs_holder {
+		padding-top: $base-line-height * 2;
+	}
+	.notes_tab {
+		float: left;
+		width: 14.2857%;
+		section + section {
+			margin-top: $base-line-height * 2;
+		}
+		section {
+			padding: 0 5px;
+		}
+	}
+}
+@media screen and (min-width: 75em) {
+	#notes_page {
+		h1, .notes_nav, .tabs_holder {
+			width: 80%;
+		}
+	}
+}

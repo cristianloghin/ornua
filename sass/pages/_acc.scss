@@ -1,0 +1,36 @@
+#acc_page {
+	
+	background: $light_background;
+
+	.page_container {
+		/* custom sizes go here */
+	}
+
+	section {
+		width: 90%;
+		margin: 0 auto;
+		
+	}
+
+	#directors-report {
+		table {
+			margin-top: $base-line-height/2;
+			tr {
+				td:first-child {
+					width: 20%;
+				};
+			}
+			td, th {
+				text-align: left !important;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 75em) {
+	#acc_page {
+		section {
+			width: 80%;
+		}
+	}
+}

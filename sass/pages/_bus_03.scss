@@ -1,0 +1,166 @@
+#bus_03_page {
+	.page_container {
+		padding-top: $base-line-height * 2;
+		> div:first-child {
+			width: 90%;
+			margin: 0 auto;
+			h1 {
+				padding-bottom: $base-line-height * 2;
+			}
+		}
+	}
+	.mod_shared_banner {
+		background-repeat: no-repeat;
+		background-size: 110% auto;
+		background-position: center center;
+	}
+	.tabs_slider {
+		.slide {
+			.contents {
+				padding: 0 5px;
+				.image {
+					width: 40%;
+					margin-left: $base-line-height * 2;
+					margin-right: 2px;
+					border-radius: $base-line-height;
+					-webkit-border-radius: $base-line-height;
+					-moz-border-radius: $base-line-height;
+					margin-bottom: $base-line-height;
+					overflow: hidden;
+					float: right;
+					img {
+						width: 100%;
+						display: block;
+					}
+				}
+				ul.logos {
+					margin-top: $base-line-height;
+				}
+				p.caption {
+					float: right;
+					width: 40%;
+					clear: right;
+					margin-left: $base-line-height * 2;
+					margin-right: 2px;
+				}
+			}
+		}
+	}
+	#sec_1, #sec_4, #sec_7 {
+		width: 100%;
+		.mod_shared_banner {
+			.slide:first-child {
+				.contents {
+					> div {
+						.$white-box {
+							width: 50%;
+							background-color: rgba(255, 255, 255, .85);
+							padding: $base-line-height;
+							border-radius: $base-line-height;
+							-webkit-border-radius: $base-line-height;
+							-moz-border-radius: $base-line-height;
+							h2 {
+
+							}
+							p {
+								font-size: 1.25em;
+								line-height: $base-line-height * 1.25;
+							}
+						}
+					}
+					
+				}
+				
+			}
+			.slide {
+				height: $base-line-height * 25;
+			}
+			.slide:last-child {
+				@include trans-background-moss-green(.9);
+			}
+			.mod_shared_ico_txt {
+				display: table-cell;
+				width: 33%;
+				span {
+					color: $meadow_green;
+				}
+				p {
+					color: $white;
+				}
+			}
+			.mod_shared_ico_txt + .mod_shared_ico_txt {
+				border-left: 1px solid $meadow_green;
+			}
+		}
+	}
+	#sec_2, #sec_3, #sec_4, #sec_5, #sec_6, #sec_7, #sec_8 {
+		margin-top: $base-line-height * 2;
+	}
+	#sec_1 {
+		.mod_shared_banner {
+			background-image: url('/img/g-bus-1.jpg');
+		}
+	}
+	#sec_4 {
+		.mod_shared_banner {
+			background-image: url('/img/g-bus-2.jpg');
+		}
+	}
+	#sec_7 {
+		.mod_shared_banner {
+			background-image: url('/img/g-bus-3.jpg');
+		}
+	}
+}
+@media screen and (min-width: 64em) {
+	
+}
+@media screen and (min-width: 75em) {
+	#bus_03_page {
+		.page_container {
+			padding-bottom: $base-line-height * 2;
+			> div:first-child {
+				width: $max_width;
+				h1 {
+					width: 80%;
+					margin: 0 auto;
+				}
+			}
+		}
+		#sec_1, #sec_4, #sec_7 {
+			.mod_shared_banner {
+				.slide:first-child {
+					.contents {
+						> div {
+							width: 80%;
+							margin: 0 auto;
+							.$white-box {
+								
+								h2 {
+									font-size: 2em;
+									line-height: $base-line-height * 2;
+								}
+							}
+						}
+					}
+				}
+				.slide {
+					height: $base-line-height * 30;
+					.contents {
+						> div {
+							width: 80%;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+		}
+		#sec_2, #sec_3, #sec_5, #sec_6, #sec_8 {
+			width: $max_width;
+			.mod_bus_con {
+				width: 80%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
